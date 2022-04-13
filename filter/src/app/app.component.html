@@ -1,0 +1,8 @@
+<p>請輸入:</p>
+<input type="text" [(ngModel)]="searchText">
+<ul *ngFor="let person of people | namefilter : searchText">
+<!-- <ul *ngFor="let person of people"> -->
+  <li>名稱: {{person.name}} 年齡: {{person.age}}</li>
+</ul>
+
+<router-outlet></router-outlet>
